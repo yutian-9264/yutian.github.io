@@ -1,1 +1,23 @@
-Hello May 23
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Conversion</title>
+</head>
+<body>
+  <input type="number" id="numberInput" placeholder="Enter number">
+  <button id="calculateButton">Convert</button>
+  <p id="binaryResult"></p>
+  <p id="hexResult"></p>
+
+  <script>
+    document.getElementById('calculateButton').addEventListener('click', function() {
+      var inputNumber = parseInt(document.getElementById('numberInput').value);
+      var binary = inputNumber.toString(2);
+      var hexadecimal = inputNumber.toString(16).toUpperCase();
+
+      document.getElementById('binaryResult').textContent = "Binary: " + binary;
+      document.getElementById('hexResult').textContent = "Hexadecimal: 0x" + hexadecimal;
+    });
+  </script>
+</body>
+</html>
